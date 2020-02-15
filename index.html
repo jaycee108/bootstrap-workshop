@@ -29,12 +29,61 @@
                     <h2> a better way to camp </h2>
                 </div>
                 <div class="col-12 col-md-4 col-xl-2">
-                    <a href="#reserveForm"><button type="button" class="btn btn-info btn-lg mt-4" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br/><strong>1-206-555-1234</strong>">Reserve Campsite</button></a>
+                    <button type="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-info btn-lg mt-4">Reserve Campsite</button></a>
                 </div>
             </div>
         </div>
     </header>
-
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content col col-sm-12 mx-auto p-0">
+                <div class="modal-header bg-info"> 
+                    <h3 class="text-white mb-0">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>       
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Number of Campers</label>    
+                                    <div class="col">
+                                        <select name="numCampers" id="numCampers" class="form-control">
+                                            <option selected>Select...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>                                                        <option value="6">6</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Date</label>  
+                                    <div class="col">                                             
+                                        <input type="date" class="form-control" id="date" name="date"placeholder="mm/dd/yyyy" />
+                                    </div> 
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label"></label>
+                                <div class="col">
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <button type="siteType" class="btn btn-success" id="siteTent">Tent</button>
+                                        <button type="siteType" class="btn btn-primary" id="siteRV">RV</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary btn-sm ml-auto">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a><button class="navbar-toggler" type="button"
@@ -186,43 +235,7 @@
             </div>
         </div>
     
-        <div class="row row-content align-items-center">
-            <div class="col col-sm-12 mx-auto">
-                <div class="card">
-                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-                    <div class="card-body">
-                        <form id="reserveForm">
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Number of Campers</label>    
-                                <div class="col">
-                                    <select name="numCampers" id="numCampers" class="form-control">
-                                        <option selected>Select...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Date</label>  
-                                <div class="col"> 
-                                    <input type="date" class="form-control" id="date" name="date"placeholder="mm/dd/yyyy" />
-                                </div> 
-                            </div>
-                            <div class="form-group row">
-                                <div class="col">
-                                        <button type="button" class="btn btn-primary">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        
 
     <footer class="site-footer">
         <div class="container">
@@ -256,11 +269,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
 </body>
 
 </html>
