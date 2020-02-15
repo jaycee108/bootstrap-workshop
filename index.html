@@ -65,17 +65,19 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                <div class="col">
-                                    <div class="btn-group btn-toggle" data-toggle="buttons">
-                                        <button type="siteType" class="btn btn-success" id="siteTent">Tent</button>
-                                        <button type="siteType" class="btn btn-primary" id="siteRV">RV</button>
-                                    </div>
+                                <div class="col col-sm-3 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success">
+                                        <input type="radio" name="siteType" id="siteTent" value="tent">Tent
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="siteType" id="siteRV" value="RV">RV
+                                    </label>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col">
                                     <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-primary ml-auto">Submit</button>
+                                    <button type="submit" class="btn btn-primary ml-auto">Search</button>
                                 </div>
                             </div>
                         </form>
